@@ -12,9 +12,12 @@ int main()
 	srand((unsigned int) time(NULL));
 	vector<string> words;
 	char guess;
-	std::fstream file;
-	string line;
-	file.open("C:/Users/fabio/Desktop/Hangman/Hangman/Debug/words.txt");
+	std::ifstream file;
+	string line, filename;
+
+	cout << "Insert the path to the file that contains the words: ";
+	cin >> filename;
+	file.open(filename);
 	
 	while (!file.eof())
 	{
